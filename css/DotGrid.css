@@ -1,0 +1,19 @@
+.dot-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.dot-grid__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto;
+  z-index: 0;
+}
+.dot-grid__content {
+  position: relative;
+  z-index: 1;
+}
