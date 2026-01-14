@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manohar & Co | Premium Electrical & Plumbing Solutions Since 1980</title>
+    <meta name="description" content="Manohar & Co (Nagaraja Electrical Stores) - Your trusted partner for electrical supplies and plumbing products since 1980. Quality wires, switches, lights, fans, pumps & more.">
+    
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/postprocessing@6.34.1/build/postprocessing.umd.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="lightning-container">
+            <svg class="lightning-bolt" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="lightning-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f5c361"/>
+                        <stop offset="50%" style="stop-color:#e8a838"/>
+                        <stop offset="100%" style="stop-color:#c4d44a"/>
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <polygon class="bolt-main" points="55,0 25,60 45,60 20,110 75,45 50,45 70,0" fill="url(#lightning-gradient)" filter="url(#glow)"/>
+            </svg>
+            <div class="spark spark-1"></div>
+            <div class="spark spark-2"></div>
+            <div class="spark spark-3"></div>
+            <div class="spark spark-4"></div>
+            <div class="spark spark-5"></div>
+            <div class="spark spark-6"></div>
+            <div class="electric-arc arc-1"></div>
+            <div class="electric-arc arc-2"></div>
+        </div>
+        <p class="preloader-text">Powering Up<span class="loading-dots"></span></p>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/logo.png" alt="Manohar & Co Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">MANOHAR&CO</span>
+                    <span class="logo-subtext">ELECTRICALS</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-cta star-border">
+                    <div class="star-border-glow"></div>
+                    <span>Get Quote</span>
+                </a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <canvas class="squares-bg" id="squaresCanvas"></canvas>
+        <div class="gridscan" id="gridScan"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">SINCE 1980</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-dark">Powering Houses,</span>
+                    <span class="title-accent">Businesses & Trust</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Reliable electrical solutions tailored for modern living. We combine premium products with expert installation to light up your world.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">
+                        <span>Explore Products</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span>Get Quote</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-showcase" id="heroShowcase">
+                <div class="circuit-showcase">
+                    <svg class="house-circuit" viewBox="0 0 400 350" fill="none">
+                        <defs>
+                            <linearGradient id="circuitGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#E8A838" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#F4D03F" stop-opacity="0.4"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        
+                        <g class="house-structure" filter="url(#glow)">
+                            <path class="circuit-path roof-path" d="M200 40 L350 140 L350 150 L200 50 L50 150 L50 140 Z" stroke="url(#circuitGlow)" stroke-width="2" fill="none"/>
+                            <rect class="circuit-path body-path" x="70" y="150" width="260" height="160" rx="4" stroke="url(#circuitGlow)" stroke-width="2" fill="none"/>
+                            <rect class="circuit-path" x="170" y="220" width="60" height="90" rx="2" stroke="url(#circuitGlow)" stroke-width="1.5" fill="none"/>
+                            <rect class="circuit-path window-path" x="95" y="180" width="50" height="50" rx="2" stroke="url(#circuitGlow)" stroke-width="1.5" fill="rgba(232,168,56,0.1)"/>
+                            <rect class="circuit-path window-path" x="255" y="180" width="50" height="50" rx="2" stroke="url(#circuitGlow)" stroke-width="1.5" fill="rgba(232,168,56,0.1)"/>
+                        </g>
+
+                        <g class="energy-lines">
+                            <path class="energy-path path-1" d="M200 50 L200 100 L120 100 L120 180" stroke="#E8A838" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path class="energy-path path-2" d="M200 50 L200 100 L280 100 L280 180" stroke="#E8A838" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path class="energy-path path-3" d="M200 150 L200 220" stroke="#E8A838" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </g>
+
+                        <g class="circuit-nodes">
+                            <circle class="node pulse-node" cx="120" cy="180" r="6" fill="#E8A838"/>
+                            <circle class="node pulse-node" cx="280" cy="180" r="6" fill="#E8A838"/>
+                            <circle class="node pulse-node" cx="200" cy="220" r="6" fill="#E8A838"/>
+                            <circle class="node" cx="200" cy="50" r="8" fill="#E8A838"/>
+                        </g>
+                    </svg>
+
+                    <div class="showcase-label label-top">
+                        <div class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <span>Power Supply</span>
+                        <div class="label-line"></div>
+                    </div>
+
+                    <div class="showcase-label label-left">
+                        <div class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 18h6M10 22h4M12 2v1M12 8a4 4 0 0 0-4 4v1h8v-1a4 4 0 0 0-4-4z"/>
+                            </svg>
+                        </div>
+                        <span>Lighting</span>
+                        <div class="label-line"></div>
+                    </div>
+
+                    <div class="showcase-label label-right">
+                        <div class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12"/>
+                            </svg>
+                        </div>
+                        <span>Ventilation</span>
+                        <div class="label-line"></div>
+                    </div>
+
+                    <div class="showcase-label label-bottom">
+                        <div class="label-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <circle cx="15.5" cy="15.5" r="1.5"/>
+                            </svg>
+                        </div>
+                        <span>Switches</span>
+                        <div class="label-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="45">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="10000">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Products Available</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-value">
+                        <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+                    </div>
+                    <span class="stat-label">Quality Assured</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <span class="section-badge">Our Heritage</span>
+                <h2 class="section-title">Generation of <span class="text-gradient">Entrepreneurs</span></h2>
+                <p class="section-subtitle">A legacy of trust, quality, and excellence spanning over a century.</p>
+            </div>
+
+            <div class="heritage-timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Textiles HNP</h3>
+                            <p class="timeline-desc">Our journey began with our great-grandfather who established a thriving textile business, laying the strong foundation of entrepreneurship that runs in our family.</p>
+                            <div class="timeline-footer">
+                                <span class="timeline-meta">Origin</span>
+                                <div class="timeline-date-pill">Est. 1908</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-center">
+                        <span class="timeline-step-num">01</span>
+                        <div class="timeline-marker">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_3261_13285)">
+                                    <path d="M9.95005 18.4299L8.81005 18.6899C8.00005 18.8799 7.36005 19.5099 7.17005 20.3299L6.91005 21.4699C6.88005 21.5899 6.71005 21.5899 6.68005 21.4699L6.42005 20.3299C6.23005 19.5199 5.60005 18.8799 4.78005 18.6899L3.64005 18.4299C3.52005 18.3999 3.52005 18.2299 3.64005 18.1999L4.78005 17.9399C5.59005 17.7499 6.23005 17.1199 6.42005 16.2999L6.68005 15.1599C6.71005 15.0399 6.88005 15.0399 6.91005 15.1599L7.17005 16.2999C7.36005 17.1099 7.99005 17.7499 8.81005 17.9399L9.95005 18.1999C10.07 18.2299 10.07 18.3999 9.95005 18.4299Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" style="stroke: var(--fillg);"/>
+                                    <path d="M9.53 13.5L16.53 9.30001C16.95 9.05001 17.3 8.44001 17.3 7.94001V4.09001C17.3 3.22001 16.59 2.51001 15.72 2.51001H8.33C7.46 2.51001 6.75 3.22001 6.75 4.09001V7.94001C6.75 8.43001 7.1 9.04001 7.52 9.30001L8.86 10.11" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                    <path opacity="0.4" d="M15.1699 13.9L16.5099 14.71C16.9299 14.96 17.2799 15.57 17.2799 16.07V19.92C17.2799 20.79 16.5699 21.5 15.6999 21.5H10.6899" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3261_13285">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="timeline-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_4418_4568)">
+                                    <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" fill="white" style="fill: var(--fillg, white);"/>
+                                    <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" fill="white" style="fill: var(--fillg, white);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4418_4568">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-center">
+                        <span class="timeline-step-num">02</span>
+                        <div class="timeline-marker">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_3261_13285)">
+                                    <path d="M9.95005 18.4299L8.81005 18.6899C8.00005 18.8799 7.36005 19.5099 7.17005 20.3299L6.91005 21.4699C6.88005 21.5899 6.71005 21.5899 6.68005 21.4699L6.42005 20.3299C6.23005 19.5199 5.60005 18.8799 4.78005 18.6899L3.64005 18.4299C3.52005 18.3999 3.52005 18.2299 3.64005 18.1999L4.78005 17.9399C5.59005 17.7499 6.23005 17.1199 6.42005 16.2999L6.68005 15.1599C6.71005 15.0399 6.88005 15.0399 6.91005 15.1599L7.17005 16.2999C7.36005 17.1099 7.99005 17.7499 8.81005 17.9399L9.95005 18.1999C10.07 18.2299 10.07 18.3999 9.95005 18.4299Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" style="stroke: var(--fillg);"/>
+                                    <path d="M9.53 13.5L16.53 9.30001C16.95 9.05001 17.3 8.44001 17.3 7.94001V4.09001C17.3 3.22001 16.59 2.51001 15.72 2.51001H8.33C7.46 2.51001 6.75 3.22001 6.75 4.09001V7.94001C6.75 8.43001 7.1 9.04001 7.52 9.30001L8.86 10.11" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                    <path opacity="0.4" d="M15.1699 13.9L16.5099 14.71C16.9299 14.96 17.2799 15.57 17.2799 16.07V19.92C17.2799 20.79 16.5699 21.5 15.6999 21.5H10.6899" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3261_13285">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="timeline-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_4418_4568)">
+                                    <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" fill="white" style="fill: var(--fillg, white);"/>
+                                    <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" fill="white" style="fill: var(--fillg, white);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4418_4568">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">HPM Enterprise</h3>
+                            <p class="timeline-desc">The second generation expanded the horizon, diversifying into new ventures and strengthening the family's business acumen across the region.</p>
+                            <div class="timeline-footer">
+                                <div class="timeline-date-pill">Est. 1955</div>
+                                <span class="timeline-meta">Expansion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Nagaraja Electrical Stores</h3>
+                            <p class="timeline-desc">Sri. Nagaraja founded the electrical business, bringing quality electrical products to households. A pivotal moment shifting towards modern utilities.</p>
+                            <div class="founder-info">
+                                <span>Founded By</span>
+                                <span>Sri. Nagaraja</span>
+                            </div>
+                            <div class="timeline-footer" style="margin-top: 15px;">
+                                <span class="timeline-meta">The Spark</span>
+                                <div class="timeline-date-pill">Est. 1980</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-center">
+                        <span class="timeline-step-num">03</span>
+                        <div class="timeline-marker">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_3261_13285)">
+                                    <path d="M9.95005 18.4299L8.81005 18.6899C8.00005 18.8799 7.36005 19.5099 7.17005 20.3299L6.91005 21.4699C6.88005 21.5899 6.71005 21.5899 6.68005 21.4699L6.42005 20.3299C6.23005 19.5199 5.60005 18.8799 4.78005 18.6899L3.64005 18.4299C3.52005 18.3999 3.52005 18.2299 3.64005 18.1999L4.78005 17.9399C5.59005 17.7499 6.23005 17.1199 6.42005 16.2999L6.68005 15.1599C6.71005 15.0399 6.88005 15.0399 6.91005 15.1599L7.17005 16.2999C7.36005 17.1099 7.99005 17.7499 8.81005 17.9399L9.95005 18.1999C10.07 18.2299 10.07 18.3999 9.95005 18.4299Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" style="stroke: var(--fillg);"/>
+                                    <path d="M9.53 13.5L16.53 9.30001C16.95 9.05001 17.3 8.44001 17.3 7.94001V4.09001C17.3 3.22001 16.59 2.51001 15.72 2.51001H8.33C7.46 2.51001 6.75 3.22001 6.75 4.09001V7.94001C6.75 8.43001 7.1 9.04001 7.52 9.30001L8.86 10.11" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                    <path opacity="0.4" d="M15.1699 13.9L16.5099 14.71C16.9299 14.96 17.2799 15.57 17.2799 16.07V19.92C17.2799 20.79 16.5699 21.5 15.6999 21.5H10.6899" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3261_13285">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="timeline-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_4418_4568)">
+                                    <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" fill="white" style="fill: var(--fillg, white);"/>
+                                    <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" fill="white" style="fill: var(--fillg, white);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4418_4568">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-center">
+                        <span class="timeline-step-num">04</span>
+                        <div class="timeline-marker">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_3261_13285)">
+                                    <path d="M9.95005 18.4299L8.81005 18.6899C8.00005 18.8799 7.36005 19.5099 7.17005 20.3299L6.91005 21.4699C6.88005 21.5899 6.71005 21.5899 6.68005 21.4699L6.42005 20.3299C6.23005 19.5199 5.60005 18.8799 4.78005 18.6899L3.64005 18.4299C3.52005 18.3999 3.52005 18.2299 3.64005 18.1999L4.78005 17.9399C5.59005 17.7499 6.23005 17.1199 6.42005 16.2999L6.68005 15.1599C6.71005 15.0399 6.88005 15.0399 6.91005 15.1599L7.17005 16.2999C7.36005 17.1099 7.99005 17.7499 8.81005 17.9399L9.95005 18.1999C10.07 18.2299 10.07 18.3999 9.95005 18.4299Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" style="stroke: var(--fillg);"/>
+                                    <path d="M9.53 13.5L16.53 9.30001C16.95 9.05001 17.3 8.44001 17.3 7.94001V4.09001C17.3 3.22001 16.59 2.51001 15.72 2.51001H8.33C7.46 2.51001 6.75 3.22001 6.75 4.09001V7.94001C6.75 8.43001 7.1 9.04001 7.52 9.30001L8.86 10.11" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                    <path opacity="0.4" d="M15.1699 13.9L16.5099 14.71C16.9299 14.96 17.2799 15.57 17.2799 16.07V19.92C17.2799 20.79 16.5699 21.5 15.6999 21.5H10.6899" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" style="stroke: var(--fillg);"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_3261_13285">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Manohar & Co</h3>
+                            <p class="timeline-desc">Transformed into a premier wholesale & retail provider. We now power thousands of homes with premium electrical and plumbing solutions.</p>
+                            <div class="timeline-footer">
+                                <div class="timeline-date-pill">Est. 2008</div>
+                                <span class="timeline-meta">Current Era</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legacy-stats">
+                <div class="legacy-stat">
+                    <span class="legacy-number" data-count="117">0</span><span class="legacy-suffix">+</span>
+                    <span class="legacy-label">Years of Legacy</span>
+                </div>
+                <div class="legacy-divider"></div>
+                <div class="legacy-stat">
+                    <span class="legacy-number" data-count="4">0</span>
+                    <span class="legacy-label">Generations</span>
+                </div>
+                <div class="legacy-divider"></div>
+                <div class="legacy-stat">
+                    <span class="legacy-number" data-count="45">0</span><span class="legacy-suffix">+</span>
+                    <span class="legacy-label">Years in Electricals</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="products-container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    Product Range
+                </span>
+                <h2 class="section-title">Everything You Need, <span class="text-gradient">One Place</span></h2>
+                <p class="section-subtitle">From wires to lights, switches to plumbing — we stock premium products from trusted brands.</p>
+            </div>
+
+            <div class="product-tabs">
+                <button class="product-tab active" data-tab="wires">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    Premium Wires
+                </button>
+                <button class="product-tab" data-tab="lights">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                        <path d="M9 18h6"></path>
+                        <path d="M10 22h4"></path>
+                    </svg>
+                    Lighting Solutions
+                </button>
+                <button class="product-tab" data-tab="switches">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                        <circle cx="12" cy="12" r="2"></circle>
+                        <path d="M6 12h.01"></path>
+                        <path d="M18 12h.01"></path>
+                    </svg>
+                    Modern Switches
+                </button>
+                <button class="product-tab" data-tab="fans">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 12c-2-2.67-6-2.67-6-2.67s0 4 2.67 6c2.67 2.67 6.67 2.67 6.67 2.67s0-4-2.67-6z"></path>
+                        <path d="M12 12c2 2.67 6 2.67 6 2.67s0-4-2.67-6c-2.67-2.67-6.67-2.67-6.67-2.67s0 4 2.67 6z"></path>
+                        <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                    Ceiling & Exhaust Fans
+                </button>
+                <button class="product-tab" data-tab="plumbing">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v6"></path>
+                        <path d="M12 22v-6"></path>
+                        <path d="M6 8v8a6 6 0 0 0 12 0V8"></path>
+                        <path d="M6 8a6 6 0 0 1 12 0"></path>
+                    </svg>
+                    Plumbing Solutions
+                </button>
+                <button class="product-tab" data-tab="conduit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                    Conduit Pipes
+                </button>
+                <button class="product-tab" data-tab="pumps">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                        <polyline points="17 2 12 7 7 2"></polyline>
+                    </svg>
+                    Pumps & Inverters
+                </button>
+            </div>
+
+            <div class="product-content">
+                <div class="product-panel active" id="panel-wires">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    5+ Variants
+                                </div>
+                                <button class="view-all-btn" data-modal="wires">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="wires">
+                                        <div class="variation-card" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop');">
+                                            <span class="variation-label">Soldering Wires</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://media.istockphoto.com/id/471968132/photo/closeup-of-copper-cable-being-rolled-up.jpg?s=612x612&w=0&k=20&c=7snK-x-Cnyx6PgPQyMJF9JvrldTWk_MtPj7Npvpt_qE=');">
+                                            <span class="variation-label">Copper Cables</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://www.nsengineers.in/wp-content/uploads/2024/03/different-types-of-cables-inner.jpg');">
+                                            <span class="variation-label">Cable Types</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://t3.ftcdn.net/jpg/06/21/96/24/360_F_621962414_4btHKw7wYnD1c1IMwgy7elpTfq6qDMl7.jpg');">
+                                            <span class="variation-label">Assorted Cables</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://d2zhlgis9acwvp.cloudfront.net/images/uploaded/electricians.jpg');">
+                                            <span class="variation-label">Professional Grade</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://img.freepik.com/premium-photo/electric-cable-background-with-sparks-bare-wires-generated-ai-illustration_18714-227.jpg');">
+                                            <span class="variation-label">Heavy Duty</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-nav carousel-nav-left" data-carousel-nav="wires" data-direction="prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_4418_4568)">
+                                            <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                            <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="carousel-nav carousel-nav-right" data-carousel-nav="wires" data-direction="next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_4418_4568)">
+                                            <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                            <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div class="carousel-indicators" data-indicators="wires"></div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Premium Wires</h3>
+                            <p class="product-desc">High-quality electrical wires for residential, commercial, and industrial applications. Fire-resistant, durable, and ISI certified.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Fire Resistant</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>ISI Certified</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Multiple Gauges</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Copper & Aluminum</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Finolex</span>
+                                <span class="brand-tag">Havells</span>
+                                <span class="brand-tag">Polycab</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-lights">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    50+ Designs
+                                </div>
+                                <button class="view-all-btn" data-modal="lights">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="lights">
+                                        <div class="variation-card" style="background-image:url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1200&h=800&fit=crop');">
+                                            <span class="variation-label">Ambient Lighting</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://images.unsplash.com/photo-1475783006851-1d68dd683eff?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9tZSUyMGxpZ2h0aW5nfGVufDB8fDB8fHww');">
+                                            <span class="variation-label">Modern Fixtures</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://cdn.shopify.com/s/files/1/2802/5332/t/37/assets/pf-54509089--buywalllightsbangalore.jpg?v=1593866823');">
+                                            <span class="variation-label">Wall Lights</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://thedecorkart.com/cdn/shop/articles/Revitalize_Your_Bedroom_with_Innovative_Lighting_Solutions.jpg?v=1716144383');">
+                                            <span class="variation-label">Bedroom Solutions</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://www.tcpi.com/wp-content/uploads/2020/10/GettyImages-177092230Flatpanel.jpg');">
+                                            <span class="variation-label">Panel Lighting</span>
+                                        </div>
+                                        <div class="variation-card" style="background-image:url('https://m.media-amazon.com/images/I/7195UJ3NQjL.jpg');">
+                                            <span class="variation-label">LED Panels</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-nav carousel-nav-left" data-carousel-nav="lights" data-direction="prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_4418_4568)">
+                                            <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                            <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="carousel-nav carousel-nav-right" data-carousel-nav="lights" data-direction="next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <g clip-path="url(#clip0_4418_4568)">
+                                            <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                            <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <div class="carousel-indicators" data-indicators="lights"></div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                                    <path d="M9 18h6"></path>
+                                    <path d="M10 22h4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Lighting Solutions</h3>
+                            <p class="product-desc">Illuminate your space with our extensive range of LED lights, decorative fixtures, and energy-efficient solutions for every room.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Energy Efficient</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>LED Technology</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Decorative Options</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Long Lifespan</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Philips</span>
+                                <span class="brand-tag">Syska</span>
+                                <span class="brand-tag">Wipro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-switches">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    30+ Models
+                                </div>
+                                <button class="view-all-btn" data-modal="switches">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="switches">
+                                <div class="variation-card" style="background-image:url('https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=1200&h=800&fit=crop');">
+                                    <span class="variation-label">Modern Design</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://5.imimg.com/data5/SELLER/Default/2025/1/481641152/AL/EK/WK/3466835/luxury-smart-touch-switch.jpg');">
+                                    <span class="variation-label">Smart Touch</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://hensleyhomes.com/wp-content/uploads/2022/03/18700469_1911248915816847_7584502389493225428_o_ce7da91a-65fc-4e29-a3cf-6a49dcd14da4_900x.jpeg');">
+                                    <span class="variation-label">Interior Switches</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://i.pinimg.com/736x/7f/40/bc/7f40bcad50210cee585843c6921f09bc.jpg');">
+                                    <span class="variation-label">Premium Finish</span>
+                                </div>
+                                    <div class="variation-card" style="background-image:url('https://www.iotics.io/cdn/shop/articles/Top_Features_of_Modern_Automation_Switchboards_1.png?v=1744870556&width=1100');">
+                                        <span class="variation-label">Automation Ready</span>
+                                    </div>
+                                    <div class="variation-card" style="background-image:url('https://i0.wp.com/blog.wishkarma.com/wp-content/uploads/2024/06/DALL%C2%B7E-2024-06-20-14.38.33-A-close-up-image-of-a-hand-pressing-a-modular-switch-with-a-beautiful-home-interior-in-the-background.-The-focus-should-be-on-the-hand-and-the-modula.webp?fit=1792%2C1024&ssl=1');">
+                                        <span class="variation-label">Modular Series</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-nav-left" data-carousel-nav="switches" data-direction="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav carousel-nav-right" data-carousel-nav="switches" data-direction="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators" data-indicators="switches"></div>
+                        </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Modern Switches</h3>
+                            <p class="product-desc">Sleek, modular switches and sockets that combine aesthetics with functionality. Smart-home ready and built to last.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Modular Design</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Touch Panels</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Shock Proof</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Multiple Colors</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Legrand</span>
+                                <span class="brand-tag">Anchor</span>
+                                <span class="brand-tag">GM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-fans">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    20+ Options
+                                </div>
+                                <button class="view-all-btn" data-modal="fans">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="fans">
+                                <div class="variation-card" style="background-image:url('https://5.imimg.com/data5/ANDROID/Default/2023/9/347208012/CZ/NR/IS/198989294/product.jpg');">
+                                    <span class="variation-label">Ceiling Fans</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://m.media-amazon.com/images/I/81HaQ59QzbL.jpg');">
+                                    <span class="variation-label">Premium Series</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://www.shutterstock.com/image-photo/create-image-bathroom-photo-ceiling-260nw-2598584423.jpg');">
+                                    <span class="variation-label">Bathroom Fans</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://chinaexhaustfan.com/wp-content/uploads/2024/11/kitchen-exhaust-fan-8.jpg');">
+                                    <span class="variation-label">Kitchen Exhaust</span>
+                                </div>
+                                    <div class="variation-card" style="background-image:url('https://www.depuley.com/cdn/shop/files/depuley-52-modern-ceiling-fan-no-light-with-remote-indooroutdoor-ceiling-fan-without-light-3-blade-low-profile-fan-for-patiosfarmhouse-reversible-dc-motor-2-dow-215450.jpg?v=1711595443');">
+                                        <span class="variation-label">Modern Design</span>
+                                    </div>
+                                    <div class="variation-card" style="background-image:url('https://cdn.prod.website-files.com/64748b312a3cf2627374a8cb/66ce6ee900756e5e544faf99_64d405d070f420d6eb7fa986_conclusion-1.jpeg');">
+                                        <span class="variation-label">BLDC Motors</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-nav-left" data-carousel-nav="fans" data-direction="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav carousel-nav-right" data-carousel-nav="fans" data-direction="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators" data-indicators="fans"></div>
+                        </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 12c-2-2.67-6-2.67-6-2.67s0 4 2.67 6c2.67 2.67 6.67 2.67 6.67 2.67s0-4-2.67-6z"></path>
+                                    <path d="M12 12c2 2.67 6 2.67 6 2.67s0-4-2.67-6c-2.67-2.67-6.67-2.67-6.67-2.67s0 4 2.67 6z"></path>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Ceiling & Exhaust Fans</h3>
+                            <p class="product-desc">Keep your spaces cool and ventilated with our range of energy-efficient ceiling fans and powerful exhaust fans.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>BLDC Motors</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Energy Star Rated</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Silent Operation</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Remote Control</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Crompton</span>
+                                <span class="brand-tag">Usha</span>
+                                <span class="brand-tag">Orient</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-plumbing">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    100+ Items
+                                </div>
+                                <button class="view-all-btn" data-modal="plumbing">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="plumbing">
+                                <div class="variation-card" style="background-image:url('https://scientificrefractories.com/wp-content/uploads/2024/10/plumber-bathware-supplier-in-Indore.jpg');">
+                                    <span class="variation-label">Bathware</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/006/965/720/small/high-quality-galvanized-steel-pipe-or-aluminum-and-chrome-stainless-pipes-in-stack-waiting-for-shipment-in-warehouse-photo.jpg');">
+                                    <span class="variation-label">Steel Pipes</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://t4.ftcdn.net/jpg/03/29/18/57/360_F_329185759_pdSuyh0LU7m01qUodGcJUY1hdAx9WgBB.jpg');">
+                                    <span class="variation-label">PVC Solutions</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://www.dolphinpipe.com/assets/images/products/u-PVC%20Pipe%20&%20Fittings.jpg');">
+                                    <span class="variation-label">Pipe Fittings</span>
+                                </div>
+                                    <div class="variation-card" style="background-image:url('https://media.istockphoto.com/id/1722486042/photo/pvc-pipes-at-construction-site-workers-in-background.jpg?s=612x612&w=0&k=20&c=yeDAtH4oZ1pvZ243-MlZ2At_Dh4xfJRzZNHrNlHfEjU=');">
+                                        <span class="variation-label">Construction Grade</span>
+                                    </div>
+                                    <div class="variation-card" style="background-image:url('https://thumbs.dreamstime.com/b/man-choosing-pipes-plumbing-shop-handsome-workman-sewer-standing-near-showcase-138753542.jpg');">
+                                        <span class="variation-label">Professional Range</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-nav-left" data-carousel-nav="plumbing" data-direction="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav carousel-nav-right" data-carousel-nav="plumbing" data-direction="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators" data-indicators="plumbing"></div>
+                        </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v6"></path>
+                                    <path d="M12 22v-6"></path>
+                                    <path d="M6 8v8a6 6 0 0 0 12 0V8"></path>
+                                    <path d="M6 8a6 6 0 0 1 12 0"></path>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Plumbing Solutions</h3>
+                            <p class="product-desc">Complete plumbing solutions including pipes, fittings, taps, and accessories for residential and commercial needs.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>CPVC & uPVC</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Leak Proof</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Corrosion Resistant</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Easy Installation</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Astral</span>
+                                <span class="brand-tag">Supreme</span>
+                                <span class="brand-tag">Prince</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-conduit">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    All Sizes
+                                </div>
+                                <button class="view-all-btn" data-modal="conduit">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="conduit">
+                                <div class="variation-card" style="background-image:url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=1200&h=800&fit=crop');">
+                                    <span class="variation-label">Standard Conduit</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://www.shutterstock.com/image-photo/plastic-hdpe-pipe-tubing-neatly-600nw-2646157787.jpg');">
+                                    <span class="variation-label">HDPE Pipes</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://media.istockphoto.com/id/1904567021/photo/installation-of-electrical-metallic-conduits-on-the-wall.jpg?s=612x612&w=0&k=20&c=8HI1LupFCJWsG7bP9MIHGssJ00twtcoJA5UhS7BNmlE=');">
+                                    <span class="variation-label">Metallic EMC</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://mahavirgroup.org/wp-content/uploads/2024/02/Conduit-Pipe.png');">
+                                    <span class="variation-label">Industrial Grade</span>
+                                </div>
+                                    <div class="variation-card" style="background-image:url('https://5.imimg.com/data5/SELLER/Default/2025/1/481239935/PF/HF/UA/41693358/ss-304-flexible-conduit-pipe.jpeg');">
+                                        <span class="variation-label">Flexible Conduit</span>
+                                    </div>
+                                    <div class="variation-card" style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/024/517/406/small/professional-contractor-with-conduit-electric-pipe-on-his-shoulder-photo.jpeg');">
+                                        <span class="variation-label">Professional Use</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-nav-left" data-carousel-nav="conduit" data-direction="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav carousel-nav-right" data-carousel-nav="conduit" data-direction="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators" data-indicators="conduit"></div>
+                        </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Conduit Pipes</h3>
+                            <p class="product-desc">Protect your electrical wiring with our durable PVC conduit pipes and accessories. Available in all standard sizes.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Flame Retardant</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>UV Resistant</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Flexible & Rigid</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>ISI Marked</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Finolex</span>
+                                <span class="brand-tag">Precision</span>
+                                <span class="brand-tag">National</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-panel" id="panel-pumps">
+                    <div class="product-showcase">
+                        <div class="product-image-wrapper">
+                            <div class="carousel-header">
+                                <div class="product-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                    </svg>
+                                    25+ Models
+                                </div>
+                                <button class="view-all-btn" data-modal="pumps">
+                                    <span>View All</span>
+                                </button>
+                            </div>
+                            <div class="product-variations-container">
+                                <div class="product-variations-carousel">
+                                    <div class="product-variations-grid" data-carousel="pumps">
+                                <div class="variation-card" style="background-image:url('https://www.contractorsdirect.com/cdn/shop/articles/modern-water-pump-garden.webp?v=1721920530&width=600');">
+                                    <span class="variation-label">Water Pumps</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://thumbs.dreamstime.com/b/modern-energy-storage-system-inverter-battery-unit-ideal-showcasing-renewable-power-smart-home-technology-detailed-412525957.jpg');">
+                                    <span class="variation-label">Energy Storage</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://sunapecopower.com/wp-content/uploads/2024/06/Why-Do-You-Need-a-Solar-Inverter-at-Home.png');">
+                                    <span class="variation-label">Solar Inverters</span>
+                                </div>
+                                <div class="variation-card" style="background-image:url('https://media.istockphoto.com/id/498509481/photo/cleaning-newly-constructed-water-bore-or-well-with-air-compressor.jpg?s=612x612&w=0&k=20&c=zjkn8G2ieG7AWbN2erj95kE_6d52rr7gzY7zGlu7-T4=');">
+                                    <span class="variation-label">Bore Well Pumps</span>
+                                </div>
+                                    <div class="variation-card" style="background-image:url('https://cdn.hswstatic.com/gif/sump-pump3.jpg');">
+                                        <span class="variation-label">Sump Pumps</span>
+                                    </div>
+                                    <div class="variation-card" style="background-image:url('https://t4.ftcdn.net/jpg/15/65/05/07/360_F_1565050775_rJpnxuD5wB1DKIpe7goeDGvhXBdaqnv4.jpg');">
+                                        <span class="variation-label">Installation Ready</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-nav carousel-nav-left" data-carousel-nav="pumps" data-direction="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button class="carousel-nav carousel-nav-right" data-carousel-nav="pumps" data-direction="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g clip-path="url(#clip0_4418_4568)">
+                                        <path d="M17.0202 2.7202L13.5402 4.4602C12.5702 4.9402 11.4402 4.9402 10.4702 4.4602L6.98022 2.7102C4.00022 1.2202 0.850218 4.4402 2.41022 7.3902L3.23022 8.9302C3.34022 9.1402 3.52022 9.3102 3.74022 9.4102L16.3902 15.1002C16.9102 15.3302 17.5202 15.1202 17.7802 14.6202L21.5902 7.3802C23.1402 4.4402 20.0002 1.2202 17.0202 2.7202Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                        <path opacity="0.4" d="M15.6 16.3093L7.31996 12.5793C6.38996 12.1593 5.44996 13.1593 5.92996 14.0593L8.96996 19.8293C10.26 22.2793 13.76 22.2793 15.05 19.8293L16.12 17.7893C16.4 17.2393 16.16 16.5693 15.6 16.3093Z" style="fill: var(--fillg, var(--color-primary));"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            <div class="carousel-indicators" data-indicators="pumps"></div>
+                        </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                    <polyline points="17 2 12 7 7 2"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="product-title">Pumps & Inverters</h3>
+                            <p class="product-desc">Reliable water pumps and power inverters for uninterrupted water supply and backup power. Energy-efficient and long-lasting.</p>
+                            <div class="product-features">
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Submersible Pumps</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Solar Inverters</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>Energy Efficient</span>
+                                </div>
+                                <div class="feature-item">
+                                    <span class="feature-check">✓</span>
+                                    <span>5 Year Warranty</span>
+                                </div>
+                            </div>
+                            <div class="product-brands">
+                                <span class="brands-label">Trusted Brands:</span>
+                                <span class="brand-tag">Crompton</span>
+                                <span class="brand-tag">Luminous</span>
+                                <span class="brand-tag">V-Guard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="leadership" id="leadership">
+        <div class="leadership-bg">
+            <div class="leadership-glow leadership-glow-1"></div>
+            <div class="leadership-glow leadership-glow-2"></div>
+        </div>
+        
+        <div class="leadership-container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Our Leader
+                </span>
+                <h2 class="section-title">The Mind Behind <span class="text-gradient">Our Success</span></h2>
+                <p class="section-subtitle">Meet the visionary driving Manohar & Co towards excellence</p>
+            </div>
+
+            <div class="leader-showcase">
+                <div class="leader-card">
+                    <div class="leader-image-section">
+                        <div class="leader-image-ring"></div>
+                        <div class="leader-image-wrapper">
+                            <img src="images/Rtn.Ashwin.png" alt="Rtn. Ashwin">
+                        </div>
+                        <div class="leader-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="leader-info-section">
+                        <h3 class="leader-name">Rtn. Ashwin</h3>
+                        <span class="leader-role">Founder & Proprietor</span>
+                        <p class="leader-quote">"Building trust through transparency and delivering excellence in every connection."</p>
+                        
+                        <div class="leader-stats">
+                            <div class="leader-stat">
+                                <span class="stat-num">40+</span>
+                                <span class="stat-text">Years</span>
+                            </div>
+                            <div class="leader-stat">
+                                <span class="stat-num">10K+</span>
+                                <span class="stat-text">Customers</span>
+                            </div>
+                            <div class="leader-stat">
+                                <span class="stat-num">100%</span>
+                                <span class="stat-text">Trust</span>
+                            </div>
+                        </div>
+
+                        <div class="leader-rotary">
+                            <span class="rotary-label">Proud Rotarian</span>
+                            <span class="rotary-motto">Service Above Self</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-bg">
+            <div class="contact-grid-lines"></div>
+            <div class="contact-aurora"></div>
+            <div class="contact-particles" id="contactParticles"></div>
+        </div>
+
+        <div class="contact-container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Get In Touch
+                </span>
+                <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                <p class="section-subtitle">We're here to power your projects. Reach out and let's make it happen!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card contact-card-visit">
+                    <div class="contact-card-glow"></div>
+                    <div class="contact-card-content">
+                        <div class="contact-icon-wrap">
+                            <div class="contact-icon-bg"></div>
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-icon-pulse"></div>
+                        </div>
+                        <h3 class="contact-card-title">Visit Our Store</h3>
+                        <p class="contact-card-text">
+                            # 185-B/519, Bangalore Road<br>
+                            Krishnagiri - 635001<br>
+                            Tamil Nadu, India
+                        </p>
+                        <a href="https://maps.google.com/maps?q=185-B/519+Bangalore+Road+Krishnagiri+635001" target="_blank" class="contact-card-link">
+                            <span>Get Directions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="contact-card-border"></div>
+                </div>
+
+                <div class="contact-card contact-card-call">
+                    <div class="contact-card-glow"></div>
+                    <div class="contact-card-content">
+                        <div class="contact-icon-wrap">
+                            <div class="contact-icon-bg"></div>
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-icon-ring"></div>
+                        </div>
+                        <h3 class="contact-card-title">Call Us</h3>
+                        <p class="contact-card-text">
+                            <a href="tel:+919843777772" class="contact-phone">+91 98437 77772</a>
+                        </p>
+                        <span class="contact-card-badge">
+                            <span class="badge-dot"></span>
+                            Available 9AM - 8PM
+                        </span>
+                    </div>
+                    <div class="contact-card-border"></div>
+                </div>
+
+                <div class="contact-card contact-card-email">
+                    <div class="contact-card-glow"></div>
+                    <div class="contact-card-content">
+                        <div class="contact-icon-wrap">
+                            <div class="contact-icon-bg"></div>
+                            <div class="contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div class="contact-icon-float"></div>
+                        </div>
+                        <h3 class="contact-card-title">Email Us</h3>
+                        <p class="contact-card-text">
+                            <a href="mailto:manohar.electricalsshop@gmail.com" class="contact-email">manohar.electricalsshop@gmail.com</a>
+                        </p>
+                        <span class="contact-card-response">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Quick Response within 2 hours
+                        </span>
+                    </div>
+                    <div class="contact-card-border"></div>
+                </div>
+
+                <div class="contact-card contact-card-whatsapp">
+                    <div class="contact-card-glow"></div>
+                    <div class="contact-card-content">
+                        <div class="contact-icon-wrap">
+                            <div class="contact-icon-bg"></div>
+                            <div class="contact-icon whatsapp-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-icon-wave"></div>
+                        </div>
+                        <h3 class="contact-card-title">WhatsApp</h3>
+                        <p class="contact-card-text">
+                            Chat with us for quick<br>quotes and inquiries
+                        </p>
+                        <a href="https://wa.me/919843777772" target="_blank" class="contact-whatsapp-btn">
+                            <span>Start Chat</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="contact-card-border"></div>
+                </div>
+            </div>
+
+            <div class="contact-bottom">
+                <div class="store-hours">
+                    <div class="store-hours-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h4>Store Hours</h4>
+                    </div>
+                    <div class="hours-grid">
+                        <div class="hours-row">
+                            <span class="day">Monday - Sunday</span>
+                            <span class="time">9:00 AM - 8:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="store-status">
+                        <span class="status-dot open"></span>
+                        <span class="status-text">Currently Open</span>
+                    </div>
+                </div>
+
+                <div class="social-orbit">
+                    <div class="orbit-center">
+                        <span>FOLLOW<br>US</span>
+                    </div>
+                    <div class="orbit-ring">
+                        <a href="https://www.facebook.com/manoharelectricalsshop" target="_blank" class="social-planet" data-platform="facebook" style="--orbit-delay: 0s;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/manohar_electricals_shop" target="_blank" class="social-planet" data-platform="instagram" style="--orbit-delay: -2s;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/919843777772" target="_blank" class="social-planet" data-platform="whatsapp" style="--orbit-delay: -4s;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:manohar.electricalsshop@gmail.com" class="social-planet" data-platform="email" style="--orbit-delay: -6s;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <svg class="contact-circuits" viewBox="0 0 1200 600" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#e8a838;stop-opacity:0"/>
+                        <stop offset="50%" style="stop-color:#e8a838;stop-opacity:0.5"/>
+                        <stop offset="100%" style="stop-color:#e8a838;stop-opacity:0"/>
+                    </linearGradient>
+                </defs>
+                <path class="circuit-path" d="M0,300 Q300,200 600,300 T1200,300" stroke="url(#circuitGrad)" fill="none" stroke-width="1"/>
+                <path class="circuit-path delay-1" d="M0,350 Q400,450 600,350 T1200,350" stroke="url(#circuitGrad)" fill="none" stroke-width="1"/>
+            </svg>
+        </div>
+    </section>
+
+    <nav class="dock-outer" id="dock">
+        <a href="#" class="dock-logo">
+            <img src="images/logo.png" alt="Manohar & Co Logo" class="dock-logo-img">
+            <div class="dock-logo-text">
+                <span class="dock-brand">MANOHAR&CO</span>
+                <span class="dock-tagline">ELECTRICALS</span>
+            </div>
+        </a>
+
+        <div class="dock-panel">
+            <a href="#home" class="dock-item" data-label="Home">
+                <div class="dock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <span class="dock-label">Home</span>
+            </a>
+            <a href="#about" class="dock-item" data-label="About">
+                <div class="dock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_4418_8961)">
+                            <path d="M10.0498 2.85003L1.25986 11.64C1.05986 11.84 1.05986 12.15 1.25986 12.35L10.0498 21.14C10.3698 21.45 10.8999 21.23 10.8999 20.79V18.2C10.8999 18.07 10.8499 17.94 10.7499 17.85L5.24985 12.35C5.04985 12.15 5.04985 11.84 5.24985 11.64L10.7499 6.14004C10.8399 6.05004 10.8999 5.92003 10.8999 5.79003V3.20004C10.8999 2.76004 10.3598 2.54003 10.0498 2.85003Z" fill="currentColor"/>
+                            <path d="M13.7499 2.85003L22.5399 11.64C22.7399 11.84 22.7399 12.15 22.5399 12.35L13.7499 21.14C13.4399 21.45 12.8999 21.23 12.8999 20.79V18.2C12.8999 18.07 12.9499 17.94 13.0499 17.85L18.5499 12.35C18.7499 12.15 18.7499 11.84 18.5499 11.64L13.0499 6.14004C12.9599 6.05004 12.8999 5.92003 12.8999 5.79003V3.20004C12.8999 2.76004 13.4399 2.54003 13.7499 2.85003Z" fill="currentColor"/>
+                            <path d="M10.0498 9.85003L8.25986 11.64C8.05986 11.84 8.05986 12.15 8.25986 12.35L10.0498 14.14C10.3698 14.45 10.8999 14.23 10.8999 13.79V10.2C10.8999 9.76004 10.3598 9.54003 10.0498 9.85003Z" fill="currentColor"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4418_8961">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="dock-label">About</span>
+            </a>
+            <a href="#products" class="dock-item" data-label="Products">
+                <div class="dock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <span class="dock-label">Products</span>
+            </a>
+            <a href="#leadership" class="dock-item" data-label="Leadership">
+                <div class="dock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_4418_8657)">
+                            <path d="M15.3899 5.2093L16.7999 8.0293C16.9899 8.4193 17.4999 8.7893 17.9299 8.8693L20.4799 9.2893C22.1099 9.5593 22.4899 10.7393 21.3199 11.9193L19.3299 13.9093C18.9999 14.2393 18.8099 14.8893 18.9199 15.3593L19.4899 17.8193C19.9399 19.7593 18.8999 20.5193 17.1899 19.4993L14.7999 18.0793C14.3699 17.8193 13.6499 17.8193 13.2199 18.0793L10.8299 19.4993C9.11994 20.5093 8.07994 19.7593 8.52994 17.8193L9.09994 15.3593C9.18994 14.8793 8.99994 14.2293 8.66994 13.8993L6.67994 11.9093C5.50994 10.7393 5.88994 9.5593 7.51994 9.2793L10.0699 8.8593C10.4999 8.7893 11.0099 8.4093 11.1999 8.0193L12.6099 5.1993C13.3799 3.6793 14.6199 3.6793 15.3899 5.2093Z" fill="currentColor"/>
+                            <path d="M8 5.75H2C1.59 5.75 1.25 5.41 1.25 5C1.25 4.59 1.59 4.25 2 4.25H8C8.41 4.25 8.75 4.59 8.75 5C8.75 5.41 8.41 5.75 8 5.75Z" fill="currentColor"/>
+                            <path d="M5 19.75H2C1.59 19.75 1.25 19.41 1.25 19C1.25 18.59 1.59 18.25 2 18.25H5C5.41 18.25 5.75 18.59 5.75 19C5.75 19.41 5.41 19.75 5 19.75Z" fill="currentColor"/>
+                            <path d="M3 12.75H2C1.59 12.75 1.25 12.41 1.25 12C1.25 11.59 1.59 11.25 2 11.25H3C3.41 11.25 3.75 11.59 3.75 12C3.75 12.41 3.41 12.75 3 12.75Z" fill="currentColor"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_4418_8657">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="dock-label">Leadership</span>
+            </a>
+            <a href="#contact" class="dock-item" data-label="Contact">
+                <div class="dock-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <span class="dock-label">Contact</span>
+            </a>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <div class="theme-toggle-track">
+                <div class="theme-toggle-thumb">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="theme-toggle-glow"></div>
+        </button>
+
+        <a href="#contact" class="dock-cta star-border">
+            <div class="star-border-glow"></div>
+            <span>Get Quote</span>
+        </a>
+    </nav>
+
+    <div class="card-nav-backdrop" id="cardNavBackdrop"></div>
+    <div class="card-nav-container" id="cardNav">
+        <nav class="card-nav">
+            <div class="card-nav-top">
+                <div class="hamburger-menu" id="cardNavHamburger" role="button" aria-label="Open menu" tabindex="0">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+
+                <a href="#" class="card-nav-logo">
+                    <div class="card-nav-logo-wrapper">
+                        <img src="images/logo.png" alt="Manohar & Co Logo" class="card-nav-logo-img">
+                    </div>
+                    <div class="card-nav-logo-text">
+                        <span class="card-nav-brand">MANOHAR&CO</span>
+                        <span class="card-nav-tagline">ELECTRICALS</span>
+                    </div>
+                </a>
+
+                <a href="#contact" class="card-nav-cta">Get Quote</a>
+            </div>
+
+            <div class="card-nav-content">
+                <div class="nav-card" data-href="#home" style="background-color: #0D0716;">
+                    <div class="nav-card-label">Home</div>
+                    <div class="nav-card-links">
+                        <a href="#home" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Welcome
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" data-href="#about" style="background-color: #170D27;">
+                    <div class="nav-card-label">About</div>
+                    <div class="nav-card-links">
+                        <a href="#about" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Our Heritage
+                        </a>
+                        <a href="#about" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            4 Generations
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" data-href="#products" style="background-color: #1a1510;">
+                    <div class="nav-card-label">Products</div>
+                    <div class="nav-card-links">
+                        <a href="#products" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Electricals
+                        </a>
+                        <a href="#products" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Plumbing
+                        </a>
+                        <a href="#products" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Pumps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" data-href="#leadership" style="background-color: #1a0d10;">
+                    <div class="nav-card-label">Leadership</div>
+                    <div class="nav-card-links">
+                        <a href="#leadership" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Board Leaders
+                        </a>
+                        <a href="#leadership" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Our Team
+                        </a>
+                    </div>
+                </div>
+
+                <div class="nav-card" data-href="#contact" style="background-color: #271E37;">
+                    <div class="nav-card-label">Contact</div>
+                    <div class="nav-card-links">
+                        <a href="tel:+919843777772" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Call Us
+                        </a>
+                        <a href="#contact" class="nav-card-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle inside menu -->
+                <div class="nav-theme-toggle-wrapper">
+                    <span class="nav-theme-label">Theme</span>
+                    <button class="theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle theme">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
